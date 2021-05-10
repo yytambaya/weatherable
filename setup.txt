@@ -1,0 +1,6 @@
+Setup
+
+
+
+Do later
+-Add .env file to gitgetignore
