@@ -30,21 +30,7 @@ app.use(cors());
 
 //body
 app.get("/", (req, res) => {
-    res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
-    res.header(
-      'Access-Control-Allow-Headers',
-      '*'
-    );    
-    request('api.openweathermap.org/data/2.5/weather?q=London&appid=fc058205a95360e0755b20358f6f9560', function(err, res2, body) {
-        if(res2){
-            console.log("Result", res2)
-            res.json({res2})
-        }
-        if(err){
-            console.log("Error:", err)
-            res.json(err)
-        }
-    });
+    res.send("Weatherable APIs");
 });
 
 app.post('/apis', (req, res) => {
