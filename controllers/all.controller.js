@@ -44,14 +44,14 @@ exports.getWeatherConditions = (req, res) => {
 
 const analyzeWeather = (temp, wind)  => {
     var r_temp = r_wind = r_rain = ""; 
-    if(temp <= 50){
+    if(temp <= 309 && temp >= 290){
         r_temp = "Normal temperature";
         r_rain = "The cloud is ok";
-    }else if(temp >= 50 &&  temp <= 80){
-        r_temp = "Aggresive temperature";
-        r_rain = "It's more likely to rain";
-    }else if(temp > 80){
-        r_temp = "Dengerous temperature";
+    }else if(temp <= 290){
+        r_temp = "It's cold";
+        r_rain = "Not likely to rain";
+    }else if(temp > 309){
+        r_temp = "It's hot";
         r_rain = "It's more likly to rain";
     }
     if(wind <= 13){
