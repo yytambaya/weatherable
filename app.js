@@ -15,29 +15,11 @@ dotenv.config();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
-//console.log(process.env.DB_URL);
-//DB connection
 
-/*mongoose.connect(process.env.DB_URL, {useNewUrlParser: true, useUnifiedTopology: true})
-.then(  () => {
-    console.log("DB connected");
-})
-.catch( (err) => {
-    console.log("Can't connect to DB:");
-})*/
-
-
-
-//body
 app.get("/", (req, res) => {
-    res.send("Weatherable APIs (me)");
-});
-
-app.post('/apis', (req, res) => {
-    res.send("APIs Home ID: " + req.body.id + " email: " + req.body.email + " password: " + req.body.password);
-    console.log("APIs Home");
+    res.send("Weatherable APIs");
 });
 
 app.listen( process.env.PORT || 5000, ()=>{
-    console.log("AssetsRoom Server started...");
+    console.log("Weatherable Server started...");
 })
