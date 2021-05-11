@@ -30,7 +30,7 @@ app.use(cors());
 
 //body
 app.get("/", (req, res) => {
-    res.send("Weatherable APIs");
+    res.send("Weatherable APIs (me)");
 });
 
 app.post('/apis', (req, res) => {
